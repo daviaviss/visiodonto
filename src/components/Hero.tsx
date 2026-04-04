@@ -31,7 +31,7 @@ export const Hero = () => {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-32 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text */}
-          <div className="flex flex-col items-start gap-6 order-2 lg:order-1">
+          <div className="flex flex-col items-start gap-6 lg:order-1">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
               Imagens precisas para{" "}
               <span className="text-white">diagnósticos confiáveis</span>
@@ -60,9 +60,9 @@ export const Hero = () => {
           </div>
 
           {/* Image */}
-          <div className="relative flex items-center justify-center order-1 lg:order-2">
+          <div className="relative hidden lg:flex items-center justify-center order-1 lg:order-2">
             {/* Sonar rings — sempre centrados no ícone */}
-            <div className="absolute inset-0 flex items-center justify-center scale-50 sm:scale-75 lg:scale-100">
+            <div className="absolute inset-0 flex items-center justify-center lg:scale-100">
               {[460, 600, 740, 880, 1020].map((size) => (
                 <div
                   key={size}
@@ -71,7 +71,7 @@ export const Hero = () => {
                 />
               ))}
             </div>
-            <img src="/dente.svg" alt="Ícone Visiodonto" className="relative w-48 sm:w-64 lg:w-full lg:max-w-md" />
+            <img src="/dente.svg" alt="Ícone Visiodonto" className="relative w-full max-w-md" />
           </div>
         </div>
       </div>
