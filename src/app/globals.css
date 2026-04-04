@@ -32,7 +32,7 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   font-feature-settings: "cv02", "cv03", "cv04";
   color: #1e293b;
-  background: #00798a;
+  background: #ffffff;
 }
 
 @media (pointer: fine) {
