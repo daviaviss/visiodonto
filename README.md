@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Visiodonto — Radiologia Odontológica
 
-## Getting Started
+Site institucional da **Visiodonto**, clínica de radiologia odontológica localizada nos Ingleses, Florianópolis.
 
-First, run the development server:
+---
+
+## Sobre o projeto
+
+Landing page moderna e responsiva desenvolvida com foco em experiência do usuário, performance e identidade visual da clínica.
+
+## Tecnologias
+
+- **Next.js 15** — App Router
+- **TypeScript**
+- **Tailwind CSS v4**
+- **Lucide React** — ícones
+
+## Funcionalidades
+
+- Animação de scanner no hero (remete à radiologia)
+- Cursor customizado com efeito de clique (desktop)
+- Loading screen com spinner ao carregar a página
+- Animações de entrada (FadeIn) ao rolar a página
+- Menu mobile com animação de slide
+- Botão flutuante de WhatsApp
+- Mapa full width integrado ao Google Maps
+- Acesso rápido para área do paciente e do dentista
+- Favicon SVG customizado
+- Fontes: **DM Serif Display** nos títulos + **Plus Jakarta Sans** no corpo
+
+## Seções
+
+- **Hero** — título, descrição e CTAs
+- **Sobre nós** — história, valores e foto da clínica
+- **Exames** — modalidades oferecidas
+- **Curiosidades** — fatos sobre radiologia digital
+- **Consultar Exames** — acesso rápido para pacientes e dentistas
+- **Contato** — informações e mapa
+
+## Rodando localmente
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Desenvolvido por [daviaviss.me](https://daviaviss.me)
