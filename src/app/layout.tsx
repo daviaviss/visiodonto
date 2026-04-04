@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/dente.svg",
   },
+  other: {
+    "theme-color": "#00798a",
+  },
 };
 
 export default function RootLayout({
