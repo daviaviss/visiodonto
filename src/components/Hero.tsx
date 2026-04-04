@@ -6,13 +6,6 @@ export const Hero = () => {
       id="inicio"
       className="relative min-h-screen flex items-center overflow-hidden bg-[#00798a]"
     >
-      {/* Diagonal line texture */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: "repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 18px)",
-        }}
-      />
 
       {/* Scanner line */}
       <div
@@ -38,7 +31,7 @@ export const Hero = () => {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-32 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text */}
-          <div className="flex flex-col items-start gap-6">
+          <div className="flex flex-col items-start gap-6 order-2 lg:order-1">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
               Imagens precisas para{" "}
               <span className="text-white">diagnósticos confiáveis</span>
@@ -49,17 +42,17 @@ export const Hero = () => {
               Agende sua consulta conosco através dos nossos canais de atendimento.
             </p>
 
-            <div className="flex flex-col gap-3 w-full">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full">
               <a
                 href="#consultar"
-                className="flex items-center justify-center gap-2 bg-white text-[#00798a] hover:bg-white/90 active:scale-95 font-semibold px-6 py-3 rounded-xl transition-all duration-200 w-full"
+                className="flex items-center justify-center gap-2 bg-white text-[#00798a] hover:bg-white/90 active:scale-95 font-semibold px-6 py-3 rounded-xl transition-all duration-200 sm:flex-[2]"
               >
                 <Search size={18} />
                 Consultar Exames
               </a>
               <a
                 href="#contato"
-                className="flex items-center justify-center gap-2 border border-white/40 hover:border-white hover:bg-white/10 active:scale-95 text-white font-medium px-6 py-3 rounded-xl transition-all duration-200 w-full"
+                className="flex items-center justify-center gap-2 border border-white/40 hover:border-white hover:bg-white/10 active:scale-95 text-white font-medium px-6 py-3 rounded-xl transition-all duration-200 sm:flex-1"
               >
                 Contato
               </a>
@@ -67,8 +60,18 @@ export const Hero = () => {
           </div>
 
           {/* Image */}
-          <div className="hidden lg:flex items-center justify-center">
-            <img src="/dente.svg" alt="Ícone Visiodonto" className="w-full max-w-md" />
+          <div className="relative flex items-center justify-center order-1 lg:order-2">
+            {/* Sonar rings — sempre centrados no ícone */}
+            <div className="absolute inset-0 flex items-center justify-center scale-50 sm:scale-75 lg:scale-100">
+              {[460, 600, 740, 880, 1020].map((size) => (
+                <div
+                  key={size}
+                  className="absolute rounded-full border border-white/[0.07] pointer-events-none"
+                  style={{ width: size, height: size }}
+                />
+              ))}
+            </div>
+            <img src="/dente.svg" alt="Ícone Visiodonto" className="relative w-48 sm:w-64 lg:w-full lg:max-w-md" />
           </div>
         </div>
       </div>

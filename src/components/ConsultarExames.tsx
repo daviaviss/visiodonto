@@ -42,7 +42,7 @@ export const ConsultarExames = () => {
             Consultar exames
           </span>
           <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-[#333333]">
-            Acesso rápido ao seus exames
+            Acesso rápido aos seus exames
           </h2>
           <p className="mt-4 text-[#757575] max-w-md mx-auto">
             Imagens e laudos a qualquer hora, de qualquer lugar.
