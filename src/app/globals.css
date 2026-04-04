@@ -13,6 +13,7 @@ h1, h2 {
 
 html {
   scroll-behavior: smooth;
+  background-color: #00798a;
 }
 
 ::selection {

@@ -10,9 +10,10 @@ export const CustomCursor = () => {
     if (!cursor) return;
 
     if (!window.matchMedia("(pointer: fine)").matches) {
-      cursor.style.display = "none";
       return;
     }
+
+    cursor.style.opacity = "1";
 
     let mouseX = 0;
     let mouseY = 0;
@@ -64,6 +65,7 @@ export const CustomCursor = () => {
     <div
       ref={cursorRef}
       className="xray-cursor fixed top-0 left-0 pointer-events-none z-[9999]"
+      style={{ opacity: 0 }}
       aria-hidden
     >
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

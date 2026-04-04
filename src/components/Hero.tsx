@@ -4,7 +4,7 @@ export const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center overflow-hidden bg-[#00798a]"
+      className="relative min-h-[100dvh] flex items-center overflow-hidden bg-[#00798a]"
     >
 
       {/* Scanner line */}
