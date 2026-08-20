@@ -5,7 +5,6 @@ import { CustomCursor } from "@/components/CustomCursor";
 import { RequisicaoForm } from "@/components/RequisicaoForm";
 
 export const metadata: Metadata = {
-  title: "Requisição de exames — Visiodonto",
   description:
     "Preencha a requisição de exames da Visiodonto online e baixe o PDF pronto para carimbar e assinar.",
 };

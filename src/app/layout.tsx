@@ -15,7 +15,7 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Visiodonto — Radiologia Odontológica",
+  title: "Visiodonto",
   description:
     "Clínica de radiologia odontológica nos Ingleses, Florianópolis. Radiografias 2D, tomografia 3D, escaneamento e impressão de modelos.",
   icons: {
