@@ -1,14 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Menu, X, Search } from "lucide-react";
 
+// Prefixados com "/" para funcionarem também a partir de /requisicao
 const navLinks = [
-  { label: "Início", href: "#inicio" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Exames", href: "#exames" },
-  { label: "Curiosidades", href: "#curiosidades" },
-  { label: "Contato", href: "#contato" },
+  { label: "Início", href: "/#inicio" },
+  { label: "Sobre", href: "/#sobre" },
+  { label: "Exames", href: "/#exames" },
+  { label: "Curiosidades", href: "/#curiosidades" },
+  { label: "Requisição", href: "/requisicao" },
+  { label: "Contato", href: "/#contato" },
 ];
 
 export const Navbar = () => {
@@ -28,28 +31,28 @@ export const Navbar = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <a href="#inicio">
+        <Link href="/#inicio">
           <img src="/visiodonto.svg" alt="Visiodonto" className="h-11" />
-        </a>
+        </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-sm text-white hover:text-white transition-colors"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#consultar"
-            className="flex items-center gap-2 bg-white text-[#00798a] hover:bg-white/90 text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
+          <Link
+            href="/#consultar"
+            className="flex items-center gap-2 bg-white text-[#00798a] hover:bg-white/90 text-sm font-semibold px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
           >
             <Search size={15} />
-            Consultar Exames
-          </a>
+            Exames e Requisição
+          </Link>
         </nav>
 
         {/* Mobile toggle */}
@@ -69,7 +72,7 @@ export const Navbar = () => {
         }`}
       >
         {navLinks.map((link, i) => (
-          <a
+          <Link
             key={link.href}
             href={link.href}
             className="text-white text-sm transition-all duration-300"
@@ -77,15 +80,15 @@ export const Navbar = () => {
             onClick={() => setOpen(false)}
           >
             {link.label}
-          </a>
+          </Link>
         ))}
-        <a
-          href="#consultar"
+        <Link
+          href="/#consultar"
           className="bg-white text-[#00798a] text-sm font-semibold px-4 py-2 rounded-lg text-center transition-colors"
           onClick={() => setOpen(false)}
         >
-          Consultar Exames
-        </a>
+          Exames e Requisição
+        </Link>
       </div>
     </header>
   );

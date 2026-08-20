@@ -48,7 +48,7 @@ export const Hero = () => {
                 className="flex items-center justify-center gap-2 bg-white text-[#00798a] hover:bg-white/90 active:scale-95 font-semibold px-6 py-3 rounded-xl transition-all duration-200 sm:flex-[2]"
               >
                 <Search size={18} />
-                Consultar Exames
+                Exames e Requisição
               </a>
               <a
                 href="#contato"

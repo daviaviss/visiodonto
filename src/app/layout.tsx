@@ -32,7 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${jakarta.variable} ${dmSerif.variable} antialiased`}>
+    <html
+      lang="pt-BR"
+      data-scroll-behavior="smooth"
+      className={`${jakarta.variable} ${dmSerif.variable} antialiased`}
+    >
       <body className="min-h-full flex flex-col">
         <LoadingScreen />
         {children}

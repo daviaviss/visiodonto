@@ -1,6 +1,8 @@
-import { ShieldCheck, Leaf, Zap, HeartHandshake, Building2 } from "lucide-react";
-import Image from "next/image";
+import { ShieldCheck, Leaf, Zap, HeartHandshake } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
+import { Carrossel } from "@/components/Carrossel";
+
+const fotos = Array.from({ length: 14 }, (_, i) => `/photo${i + 1}.jpeg`);
 
 const valores = [
   {
@@ -30,25 +32,8 @@ export const Sobre = () => {
     <section id="sobre" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Image */}
-          <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-lg lg:order-first order-last">
-            <Image
-              src="/empresa.webp"
-              alt="Equipamentos da Visiodonto"
-              fill
-              className="object-cover"
-            />
-            {/* Card flutuante */}
-            <div className="group absolute bottom-4 left-4 right-4 bg-[#f4fafb] hover:bg-[#e0f0f2] border border-transparent hover:border-[#00798a]/20 rounded-2xl px-5 py-4 flex items-center gap-4 shadow-md transition-all duration-300">
-              <div className="w-10 h-10 rounded-xl bg-[#757575]/10 group-hover:bg-[#00798a]/15 flex items-center justify-center shrink-0 transition-colors duration-300">
-                <Building2 size={18} className="text-[#757575] group-hover:text-[#00798a] transition-colors duration-300" />
-              </div>
-              <div>
-                <p className="text-xs text-[#757575]">Fundada em</p>
-                <p className="text-sm font-bold text-[#333333]">Junho de 2021 — Visiodonto</p>
-              </div>
-            </div>
-          </div>
+          {/* Carrossel de fotos */}
+          <Carrossel fotos={fotos} className="lg:order-first order-last" />
 
           {/* Text + cards */}
           <div className="lg:order-last order-first">

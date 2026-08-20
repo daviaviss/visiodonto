@@ -1,6 +1,7 @@
 "use client";
 
-import { UserRound, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { UserRound, ArrowRight, ClipboardList } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 
 const ToothIcon = ({ className }: { className?: string }) => (
@@ -39,14 +40,14 @@ export const ConsultarExames = () => {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-14">
           <span className="text-[#00798a] text-sm font-semibold uppercase tracking-widest">
-            Consultar exames
+            Exames e requisição
           </span>
           <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-[#333333]">
-            Acesso rápido aos seus exames
+            Acesso rápido, tudo online
           </h2>
-          <p className="mt-4 text-[#757575] max-w-md mx-auto">
-            Imagens e laudos a qualquer hora, de qualquer lugar.
-            Sem precisar ligar ou ir até a clínica.
+          <p className="mt-4 text-[#757575] max-w-xl mx-auto">
+            Imagens e laudos a qualquer hora, de qualquer lugar — e a requisição
+            preenchida pelo próprio site. Sem precisar ligar ou ir até a clínica.
           </p>
         </div>
 
@@ -95,6 +96,28 @@ export const ConsultarExames = () => {
             </a>
           </FadeIn>
         </div>
+
+        {/* Requisição online */}
+        <FadeIn delay={250}>
+          <Link
+            href="/requisicao"
+            className="group mt-6 max-w-3xl mx-auto flex flex-col sm:flex-row sm:items-center gap-4 p-6 rounded-3xl bg-white border border-[#00798a]/20 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <div className="w-14 h-14 rounded-2xl flex items-center justify-center bg-[#00798a]/10 shrink-0">
+              <ClipboardList size={28} className="text-[#00798a]" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-[#333333]">Requisição online</h3>
+              <p className="mt-1 text-sm leading-relaxed text-[#757575]">
+                Preencha a requisição pelo site e baixe o PDF pronto para carimbar e assinar.
+              </p>
+            </div>
+            <div className="flex items-center justify-center gap-2 font-semibold text-sm px-5 py-3 rounded-xl bg-[#00798a] group-hover:bg-[#005f6e] text-white transition-colors">
+              Preencher requisição
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </div>
+          </Link>
+        </FadeIn>
       </div>
     </section>
   );
